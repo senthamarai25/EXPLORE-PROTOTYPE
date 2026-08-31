@@ -9,45 +9,40 @@ body {
     background: #eeeeee;
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
 }
 
+/* Main mobile screen */
 .phone {
-    width: 390px;
-    min-height: 844px;
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
     background: white;
-    border-radius: 35px;
-    padding: 28px 18px 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
-    overflow: hidden;
+    padding: 45px 18px 10px;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5px 25px;
+    padding: 15px 8px 28px;
 }
 
 header h1 {
-    font-size: 30px;
-    color: #17194d;
+    font-size: 31px;
+    font-weight: 700;
+    color: #10143f;
 }
 
 .header-icons {
     display: flex;
-    gap: 22px;
-    font-size: 30px;
-    color: #111344;
-}
-
-.header-icons span {
-    cursor: pointer;
+    gap: 20px;
+    font-size: 29px;
+    color: #10143f;
 }
 
 /* Cards */
-
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -55,100 +50,146 @@ header h1 {
 }
 
 .card {
-    height: 145px;
-    border-radius: 18px;
-    padding: 17px;
+    height: 180px;
+    border-radius: 19px;
+    padding: 18px 13px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: 0.2s;
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: transform 0.2s;
 }
 
 .card:hover {
     transform: scale(1.02);
 }
 
+/* Text stays above image */
+.card > div:first-child {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
 .card h2 {
-    font-size: 17px;
-    color: #111633;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101633;
     margin-bottom: 14px;
+    font-weight: 700;
 }
 
 .card p {
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 12.5px;
+    line-height: 1.55;
     color: #30354a;
+    max-width: 155px;
 }
 
+/* Image / illustration */
+.emoji {
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 3px;
+    font-size: 57px;
+    opacity: 0.85;
+}
+
+/* Card backgrounds */
 .popular,
 .activities {
-    background: #e5f0ff;
+    background: #e3f0ff;
 }
 
 .gems {
-    background: #e5f4e7;
+    background: #e2f4e7;
 }
 
 .food,
 .guides {
-    background: #f5f1e8;
+    background: #f6f1e7;
 }
 
 .shopping {
-    background: #e6effa;
+    background: #e3effc;
 }
 
-.emoji {
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
-    font-size: 60px;
-    opacity: 0.8;
-}
-
-/* Nearby Button */
-
+/* Nearby button */
 .nearby {
     width: 100%;
-    height: 58px;
+    height: 59px;
     margin-top: 18px;
     border: none;
-    border-radius: 14px;
-    background: linear-gradient(90deg, #5b20d5, #5420e8);
+    border-radius: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #6124dc,
+        #531ce8
+    );
+
     color: white;
     font-size: 17px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
+
+    box-shadow: 0 3px 8px rgba(80, 30, 220, 0.2);
 }
 
-.nearby:hover {
-    opacity: 0.9;
-}
-
-/* Bottom Navigation */
-
+/* Bottom navigation */
 nav {
     border-top: 1px solid #eeeeee;
     margin-top: 18px;
     padding-top: 12px;
+
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 nav div {
     text-align: center;
-    color: #444444;
+    color: #555;
     font-size: 25px;
     cursor: pointer;
+    min-width: 55px;
 }
 
 nav small {
     display: block;
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 5px;
 }
 
 nav .active {
-    color: #5922d7;
-    font-weight: bold;
+    color: #5a24d7;
+    font-weight: 700;
+}
+
+/* Smaller mobile screens */
+@media (max-width: 360px) {
+
+    .phone {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .card {
+        height: 175px;
+        padding: 15px 11px;
+    }
+
+    .card h2 {
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 11.5px;
+        max-width: 140px;
+    }
+
+    .emoji {
+        font-size: 48px;
+    }
 }
