@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.phone {
+    width: 390px;
+    min-height: 844px;
+    background: white;
+    border-radius: 35px;
+    padding: 28px 18px 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #17194d;
+}
+
+.header-icons {
+    display: flex;
+    gap: 22px;
+    font-size: 30px;
+    color: #111344;
+}
+
+.header-icons span {
+    cursor: pointer;
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.card {
+    height: 145px;
+    border-radius: 18px;
+    padding: 17px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h2 {
+    font-size: 17px;
+    color: #111633;
+    margin-bottom: 14px;
+}
+
+.card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #30354a;
+}
+
+.popular,
+.activities {
+    background: #e5f0ff;
+}
+
+.gems {
+    background: #e5f4e7;
+}
+
+.food,
+.guides {
+    background: #f5f1e8;
+}
+
+.shopping {
+    background: #e6effa;
+}
+
+.emoji {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 60px;
+    opacity: 0.8;
+}
+
+/* Nearby Button */
+
+.nearby {
+    width: 100%;
+    height: 58px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #5b20d5, #5420e8);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nearby:hover {
+    opacity: 0.9;
+}
+
+/* Bottom Navigation */
+
+nav {
+    border-top: 1px solid #eeeeee;
+    margin-top: 18px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav div {
+    text-align: center;
+    color: #444444;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav small {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+nav .active {
+    color: #5922d7;
+    font-weight: bold;
+}

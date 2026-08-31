@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- Header -->
+    <header>
+        <h1>Explore</h1>
+
+        <div class="header-icons">
+            <span onclick="search()">⌕</span>
+            <span onclick="notify()">♧</span>
+        </div>
+    </header>
+
+    <!-- Explore Cards -->
+    <main class="cards">
+
+        <div class="card popular" onclick="openPage('Popular Places')">
+            <div>
+                <h2>🔥 Popular Places</h2>
+                <p>Top attractions &<br>famous places</p>
+            </div>
+            <div class="emoji">🏛️</div>
+        </div>
+
+        <div class="card gems" onclick="openPage('Hidden Gems')">
+            <div>
+                <h2>🌿 Hidden Gems</h2>
+                <p>Explore less-known<br>beautiful places</p>
+            </div>
+            <div class="emoji">🏞️</div>
+        </div>
+
+        <div class="card food" onclick="openPage('Local Food')">
+            <div>
+                <h2>🍛 Local Food</h2>
+                <p>Discover local<br>cuisine & restaurants</p>
+            </div>
+            <div class="emoji">🍲</div>
+        </div>
+
+        <div class="card guides" onclick="openPage('Local Guides')">
+            <div>
+                <h2>🧑 Local Guides</h2>
+                <p>Connect with<br>verified local guides</p>
+            </div>
+            <div class="emoji">🧑‍💼</div>
+        </div>
+
+        <div class="card shopping" onclick="openPage('Shopping')">
+            <div>
+                <h2>🛍️ Shopping</h2>
+                <p>Best shopping<br>places & markets</p>
+            </div>
+            <div class="emoji">🏪</div>
+        </div>
+
+        <div class="card activities" onclick="openPage('Activities & Tickets')">
+            <div>
+                <h2>🎟️ Activities & Tickets</h2>
+                <p>Book tickets for<br>events & activities</p>
+            </div>
+            <div class="emoji">🎡</div>
+        </div>
+
+    </main>
+
+    <!-- Explore Nearby -->
+    <button class="nearby" onclick="exploreNearby()">
+        ⊕ &nbsp; EXPLORE NEARBY
+    </button>
+
+    <!-- Bottom Navigation -->
+    <nav>
+        <div onclick="home()">⌂<small>Home</small></div>
+
+        <div class="active">
+            ⌕<small>Explore</small>
+        </div>
+
+        <div onclick="bookings()">▣<small>Bookings</small></div>
+
+        <div onclick="safety()">♢<small>Safety</small></div>
+
+        <div onclick="profile()">♙<small>Profile</small></div>
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
